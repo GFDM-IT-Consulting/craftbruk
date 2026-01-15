@@ -90,6 +90,38 @@ body {
     gap: 1rem;
 }
 
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.header-flag {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.header-flag .polish-flag {
+    width: 60px;
+    height: auto;
+}
+
+.header-flag .flag-caption {
+    color: var(--white);
+    font-size: 0.65rem;
+    text-align: center;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
 .header-logo-center {
     text-align: center;
 }
@@ -524,11 +556,33 @@ h2::after {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 3rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-flag .polish-flag {
+    width: 70px;
+    height: auto;
+}
+
+.footer-flag .flag-caption {
+    color: var(--white);
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
 }
 
 .footer-logo img {
@@ -575,6 +629,14 @@ h2::after {
 
     .footer-content {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .header-flag .polish-flag {
+        width: 50px;
+    }
+
+    .header-flag .flag-caption {
+        font-size: 0.55rem;
     }
 }
 
@@ -686,6 +748,28 @@ h2::after {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .header-flag {
+        position: static;
+        margin-top: 0.5rem;
+    }
+
+    .header-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header-flag .polish-flag {
+        width: 45px;
+    }
+
+    .header-flag .flag-caption {
+        font-size: 0.5rem;
+    }
+
+    .footer-flag .polish-flag {
+        width: 60px;
     }
 
     .hero-cta {
